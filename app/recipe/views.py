@@ -17,7 +17,3 @@ class RecipeViewSet(viewsets.ModelViewSet):
             queryset = queryset.filter(name__contains=name)
 
         return queryset.order_by('-id')
-
-    def perform_create(self, serializer):
-        """Create a new recipe"""
-        serializer.save()
